@@ -24,8 +24,8 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.28.0
         with:
-            image-ref: 'docker.io/VickyRaji/cf-sysfoo:latest'
-            format: 'table'
+          image-ref: 'docker.io/VickyRaji/cf-sysfoo:latest'
+          format: 'table'
         
       - name: DAST - ZAP
         run: echo "DAST - ZAP"
