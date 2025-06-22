@@ -19,7 +19,13 @@ jobs:
         run: echo "SAST"
         
       - name: Docker Image
-        run: docker build -t VickyRaji/cf-sysfoo .
+        run: docker build -t VickyRaji0105/cf-sysfoo .
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: 'docker.io/VickyRaji0105/cf-sysfoo:latest'
+          format: 'table'
 
       - name: DAST - ZAP
         uses: zaproxy/action-baseline@v0.14.0
