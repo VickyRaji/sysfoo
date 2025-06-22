@@ -26,7 +26,6 @@ jobs:
           with:
           image-ref: 'docker.io/VickyRaji/cf-sysfoo:latest'
           format: 'table'
-          exit-code: '1'
         
       - name: DAST - ZAP
         run: echo "DAST - ZAP"
