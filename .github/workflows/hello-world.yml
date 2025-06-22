@@ -26,3 +26,8 @@ jobs:
         with:
           image-ref: 'docker.io/santhoshnc/cf-sysfoo:latest'
           format: 'table'
+
+      - name: DAST - ZAP
+        uses: zaproxy/action-baseline@v0.14.0
+        with:
+          target: 'https://ginandjuice.shop/'
