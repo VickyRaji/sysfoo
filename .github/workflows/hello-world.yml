@@ -20,8 +20,3 @@ jobs:
         
       - name: Docker Image
         run: docker build -t VickyRaji/cf-sysfoo .
-
-      - name: DAST - ZAP
-        uses: zaproxy/action-baseline@v0.14.0
-        with:
-          target: 'https://ginandjuice.shop/'
